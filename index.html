@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - tucker-juliette</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./styles/style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- navbar with links to my code and validation-->
+<nav class="navbar navbar-expand-md">
+  <!-- Brand -->
+  <a class="navbar-brand">Beth Ann Tucker</a>
+  <!-- Navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Code</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Validation</a>
+      </li>
+    </ul>
+</nav>
+
+<!-- swithch that will let you go between the original interface and my interface-->
+<div class="row" id="toggleOptions">
+  <div class="col-sm" id="oldText">Old</div>
+  <div class="col-sm">
+    <label class="switch">
+  <input type="checkbox" onclick="toggleFunction()">
+  <span class="slider round"></span>
+</label>
+  </div>
+  <div class="col-sm" id="newText">New</div>
+</div>
+
+<!-- div that countains everything that relates to the old interface-->
+<div id= "old">
+  <!-- card describing what was wronf iwht orginal with a screenshot-->
+  <div class="card" id= "oldCard">
+  <div class="card-body">
+    <h4 class="card-title">Beta Alpha Psi Score Card</h4>
+    <p class="card-text">As president of Beta Alpha Psi, an accounting honor society, I frequenly go to bap.org to view requirement for our club. BAP chapters can earn three different status levels, non-award seeking, distinguished, and superior. The way that BAP has the score card set up it shows requirements for all three levels no matter what. Not only is this confusing and more difficult to read, but it also requires mental math (and even though we are accountants, we try to avoid doing math).</p>
+  </div>
+<img class="card-img-top" src="bap scorecard.png" alt="Website screenshot">
+</div>
+</div>
+
+<!-- div with everything related to my upgrade of the original-->
+<div id="new">
+<div class="card" id= "newCard">
+  <!-- card describing the imporvements-->
+  <div class="card-body">
+    <h4 class="card-title">Beth Ann's Version of the Beta Alpha Psi Score Card</h4>
+    <p class="card-text">If BAP would allow me to redesign the score card, I would have it were the user can toggle between the different levels. This makes it where no unneccessary information is displayed and most importantly, no mental math required. Additionally, this formats highlights the total making it easier to find. </p>
+  </div>
+</div>
+  
+  <!--Radio choices for the different chapter levels-->
+<div id= "levelChoices">
+    Planned Achievement Level: 
+<input type="radio" onclick="nonawardFunction()" id="nonAwardRadio" name="attr_var">
+<label for="html">Non-award seeking</label>
+<input type="radio" onclick="distiguishedFunction()" id="distiguishedRadio" name="attr_var">
+<label for="css">Distigished</label>
+<input type="radio" onclick="superiorFunction()" id="superiorRadio" name="attr_var">
+<label for="css">Superior</label>
+</div>
+
+   <!--Tables according to the different levels-->
+<div class="container" id="inputNonAward">       
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Requirement</th>
+        <th>YTD Credit</th>
+        <th>Points Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Begining of Year Report</td>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Initiation</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Mid-year report</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>End of Year Report</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Reaching Out Activities (ROAs)</td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Professional Activities</td>
+        <td>6</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>Professional Activities</td>
+        <td>2</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Total Points</td>
+        <td>12</td>
+        <td>14</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="container" id="inputDistguished">     
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Requirement</th>
+        <th>YTD Credit</th>
+        <th>Points Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Begining of Year Report</td>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Initiation</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Mid-year report</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>End of Year Report</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Reaching Out Activities (ROAs)</td>
+        <td>3</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>Professional Activities</td>
+        <td>6</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>Service Activities</td>
+        <td>2</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Additional Skills Activity</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Total Points</td>
+        <td>12</td>
+        <td>26</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="container" id="inputSuperior">     
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Requirement</th>
+        <th>YTD Credit</th>
+        <th>Points Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Begining of Year Report</td>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Initiation</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Mid-year report</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>End of Year Report</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Reaching Out Activities (ROAs)</td>
+        <td>3</td>
+        <td>11</td>
+      </tr>
+      <tr>
+        <td>Professional Activities</td>
+        <td>6</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>Service Activities</td>
+        <td>2</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>Additional Skills Activity</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Total Points</td>
+        <td>12</td>
+        <td>34</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js'></script><script  src="./scripts/script.js"></script>
+
+</body>
+</html>
